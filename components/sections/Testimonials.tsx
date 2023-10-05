@@ -18,25 +18,25 @@ type TestimonialT = {
 
 const TestimonialA: TestimonialT[] = [
   {
-    photo: "/assets/profileImage.png",
+    photo: "/assets/pfp1.png",
     name: "Rayhan Curran",
     description:
       "Get a fully retina ready site when you build with Startup Framework. Websites look sharper and more gorgeous on devices with retina display support",
   },
   {
-    photo: "/assets/profileImage.png",
+    photo: "/assets/pfp2.jpeg",
     name: "Kayley Frame",
     description:
       "As a business targeting high net worth individuals, we were looking for a slick, cool and mini-malistic design for our website",
   },
   {
-    photo: "/assets/profileImage.png",
+    photo: "/assets/pfp3.jpeg",
     name: "Gene Whitfield",
     description:
       "The most important part of the Startup Framework is the samples",
   },
   {
-    photo: "/assets/profileImage.png",
+    photo: "/assets/pfp4.jpeg",
     name: "Allan Kim",
     description:
       "I’ve built my website with Startup just in one day, and it was ready-to-go. ",
@@ -83,6 +83,12 @@ function Testimonials() {
               </SwiperSlide>
             </Swiper>
           </motion.div>
+          <motion.span
+            className="text-center text-xs font-bold tracking-[0.4em] text-neutral-400"
+            variants={childrenVar("vertical", "spring")}
+          >
+            TESTIMONIALS
+          </motion.span>
           <motion.h1
             className="text-center text-3xl font-semibold text-textcustom md:text-4xl lg:text-5xl"
             variants={childrenVar("vertical", "spring")}
@@ -108,7 +114,7 @@ function Testimonials() {
 
 function TestimonialC(props: TestimonialT) {
   return (
-    <div className="flex items-start justify-center gap-5 rounded-md border border-red-400 bg-white p-5">
+    <div className="flex items-start justify-center gap-5 rounded-md border  bg-white p-5">
       <div className="relative aspect-square h-20 ">
         <Image
           alt=""

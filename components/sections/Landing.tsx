@@ -67,7 +67,7 @@ function Landing() {
               </Link>
             </motion.div>
           </div>
-          <div className="relative flex w-full items-center justify-center  p-10 xl:w-1/2">
+          <div className="relative flex w-full items-center justify-center mt-10 xl:mt-0 p-10 xl:w-1/2">
             <motion.div
               variants={childrenVar("vertical", "spring")}
               className="absolute -top-[5%] left-0 flex items-start justify-center gap-2.5 rounded-md bg-white px-4 py-2 pr-10 font-bold shadow-lg shadow-black/20 lg:top-0"
@@ -87,13 +87,13 @@ function Landing() {
               100% Business Growth
             </motion.div>
             <motion.div variants={childrenVar("vertical", "spring")}>
-              <div className="relative z-[2] aspect-square w-[600px] overflow-hidden rounded-full border  bg-white ">
-                {/* <Image
+              <div className="relative z-[2] aspect-square w-[600px] overflow-hidden rounded-full border shadow-black/20 shadow-lg bg-white ">
+                <Image
                   alt=""
                   className="absolute left-0 top-0"
                   src={"/assets/femaleModel.png"}
                   fill
-                /> */}
+                />
               </div>
             </motion.div>
             {/* <div className="absolute aspect-square h-full max-h-[550px] rounded-full  bg-white shadow-lg shadow-black/20" /> */}
