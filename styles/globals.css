@@ -9,3 +9,15 @@ body {
 html {
   @apply scroll-smooth
 }
+
+
+:root {
+  --swiper-navigation-size: 40px !important;
+  --swiper-navigation-top-offset: 92.5%;
+  --swiper-navigation-sides-offset: 40%;
+  --swiper-navigation-color: theme("colors.neutral.500");
+}
+
+/* * {
+  @apply outline-green-500 outline
+} */

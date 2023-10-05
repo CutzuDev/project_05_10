@@ -12,12 +12,12 @@ function Landing() {
         whileInView="visible"
         viewport={{ once: true }}
         initial="hidden"
-        className="flex w-full flex-1 items-center justify-center border border-red-300/30 p-5 md:p-10 lg:p-20"
+        className="flex w-full flex-1 items-center justify-center border  p-5 md:p-10 lg:p-20"
       >
         <div className="flex w-full max-w-[1600px] flex-col items-stretch justify-center gap-10 lg:flex-row lg:gap-0">
-          <div className="flex w-full flex-col items-start justify-start gap-5 bg-orange-400/30 md:gap-10 xl:w-1/2">
+          <div className="flex w-full flex-col items-start justify-start gap-5  md:gap-10 xl:w-1/2">
             <motion.h1
-              className=" text-textcustom text-4xl font-extrabold md:text-6xl lg:text-7xl"
+              className=" text-4xl font-extrabold text-textcustom md:text-6xl lg:text-7xl"
               variants={childrenVar("vertical", "spring")}
             >
               Where OnlyFans Dreams Become Reality
@@ -29,9 +29,12 @@ function Landing() {
               At Beautive, we're dedicated to ensuring your OnlyFans success.
               Let us help you transform your passion into profitable content.
             </motion.p>
-            <div className="flex items-center justify-center gap-2.5">
+            <motion.div
+              variants={childrenVar("vertical", "spring")}
+              className="flex items-center justify-center gap-2.5"
+            >
               <Link
-                className="bg-custom rounded-md px-4 py-2 font-semibold text-white"
+                className="rounded-md bg-custom px-4 py-2 font-semibold text-white"
                 href={"/#contact"}
               >
                 Get Started
@@ -55,21 +58,20 @@ function Landing() {
                   />
                   <path
                     fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     d="M30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60V56C15.6406 56 4 44.3594 4 30C4 15.6406 15.6406 4 30 4V0Z"
                     fill="#90E0EF"
                   />
                 </svg>
                 Learn More
               </Link>
-            </div>
+            </motion.div>
           </div>
-          <div className="relative flex w-full items-center justify-center bg-orange-400/30 p-10 xl:w-1/2">
-            <div className="relative z-[2] aspect-square w-[600px]  border border-purple-500/50">
-              <Image alt="" src={"/assets/femaleModel.png"} fill />
-            </div>
-            <div className="absolute aspect-square h-full max-h-[550px] rounded-full  bg-white shadow-lg shadow-black/20" />
-            <div className="absolute pr-10 -top-[5%] left-0 flex items-start justify-center gap-2.5 rounded-md bg-white px-4 py-2 font-bold shadow-lg shadow-black/20 lg:top-0">
+          <div className="relative flex w-full items-center justify-center  p-10 xl:w-1/2">
+            <motion.div
+              variants={childrenVar("vertical", "spring")}
+              className="absolute -top-[5%] left-0 flex items-start justify-center gap-2.5 rounded-md bg-white px-4 py-2 pr-10 font-bold shadow-lg shadow-black/20 lg:top-0"
+            >
               <svg
                 width="40"
                 height="43"
@@ -83,8 +85,22 @@ function Landing() {
                 />
               </svg>
               100% Business Growth
-            </div>
-            <div className="absolute -bottom-[5%] pr-14 right-0 flex flex-col items-start justify-start gap-1 rounded-md bg-white px-4 py-2 shadow-lg shadow-black/20 lg:bottom-0  lg:left-0 lg:right-auto">
+            </motion.div>
+            <motion.div variants={childrenVar("vertical", "spring")}>
+              <div className="relative z-[2] aspect-square w-[600px] overflow-hidden rounded-full border  bg-white ">
+                {/* <Image
+                  alt=""
+                  className="absolute left-0 top-0"
+                  src={"/assets/femaleModel.png"}
+                  fill
+                /> */}
+              </div>
+            </motion.div>
+            {/* <div className="absolute aspect-square h-full max-h-[550px] rounded-full  bg-white shadow-lg shadow-black/20" /> */}
+            <motion.div
+              variants={childrenVar("vertical", "spring")}
+              className="absolute -bottom-[5%] right-0 flex flex-col items-start justify-start gap-1 rounded-md bg-white px-4 py-2 pr-14 shadow-lg shadow-black/20 lg:bottom-0  lg:left-0 lg:right-auto"
+            >
               <span className="font-bold">40+ Happy Models</span>
               <div className="flex items-center justify-center gap-1">
                 <svg
@@ -101,9 +117,9 @@ function Landing() {
                   />
                 </svg>
                 <span>4.9</span>
-                <span>(44 Reviews)</span>
+                <span className="text-neutral-500/70">(44 Reviews)</span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
