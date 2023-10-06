@@ -7,15 +7,16 @@ body {
 }
 
 html {
-  @apply scroll-smooth
+  @apply scroll-smooth;
 }
-
 
 :root {
   --swiper-navigation-size: 40px !important;
-  --swiper-navigation-top-offset: 92.5%;
-  --swiper-navigation-sides-offset: 40%;
-  --swiper-navigation-color: theme("colors.neutral.500");
+  --swiper-navigation-color: theme("colors.neutral.200");
+  @screen md {
+    --swiper-navigation-top-offset: 92.5%;
+    --swiper-navigation-sides-offset: 40%;
+  }
 }
 
 /* * {
