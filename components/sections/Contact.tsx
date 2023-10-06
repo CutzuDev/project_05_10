@@ -10,7 +10,7 @@ function Contact() {
       id="contact"
       className="flex min-h-screen w-full select-none flex-col items-center justify-start "
     >
-      <Divider />
+      {/* <Divider /> */}
       <motion.div
         variants={parentVariant(0.5, 0.25)}
         whileInView="visible"

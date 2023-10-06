@@ -45,8 +45,8 @@ const TestimonialA: TestimonialT[] = [
 
 function Testimonials() {
   return (
-    <section className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
-      <Divider />
+    <section id="succes" className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
+      {/* <Divider /> */}
       <motion.div
         variants={parentVariant(0.5, 0.25)}
         whileInView="visible"
@@ -96,7 +96,7 @@ function Testimonials() {
             Success Stories
           </motion.h1>
 
-          <div className="flex w-full max-w-[910px] flex-wrap items-start justify-start gap-5">
+          <div className="flex w-full max-w-[910px] flex-col lg:flex-row flex-wrap items-center xl:items-start justify-start gap-5">
             {TestimonialA.map((item, index) => (
               <motion.div
                 variants={childrenVar("vertical", "spring")}
