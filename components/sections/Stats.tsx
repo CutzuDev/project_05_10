@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Counter, Divider, childrenVar, parentVariant } from "../ui/utils";
+import { useRef } from "react";
 
 const StatsA: { stat: number; text: string }[] = [
   {
@@ -57,10 +58,19 @@ function Stats() {
 }
 
 function StatC(props: { stat: number; text: string; index: number }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <div className="flex h-[200px] flex-col items-center justify-center gap-5 rounded-3xl bg-white p-5 py-10 font-bold shadow-md shadow-black/20">
+    <div
+      ref={ref}
+      className="flex h-[200px] flex-col items-center justify-center gap-5 rounded-3xl bg-white p-5 py-10 font-bold shadow-md shadow-black/20"
+    >
       <span className="text-5xl">
-        $ {<Counter from={0} to={1.5} duration={1.5 + props.index / 2} />} M
+        ${" "}
+        {isInView && (
+          <Counter from={0} to={1.5} duration={1.5 + props.index / 2} />
+        )}{" "}
+        M
       </span>
       <span className="text-2xl text-custom">{props.text}</span>
     </div>

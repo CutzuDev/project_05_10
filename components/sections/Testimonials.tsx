@@ -45,7 +45,10 @@ const TestimonialA: TestimonialT[] = [
 
 function Testimonials() {
   return (
-    <section id="succes" className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
+    <section
+      id="succes"
+      className="flex min-h-screen w-full select-none flex-col items-center justify-start "
+    >
       {/* <Divider /> */}
       <motion.div
         variants={parentVariant(0.5, 0.25)}
@@ -96,10 +99,11 @@ function Testimonials() {
             Success Stories
           </motion.h1>
 
-          <div className="flex w-full max-w-[910px] flex-col lg:flex-row flex-wrap items-center xl:items-start justify-start gap-5">
+          <div className="flex w-full max-w-[1000px] flex-wrap gap-5 items-stretch justify-start  border border-red-500">
             {TestimonialA.map((item, index) => (
               <motion.div
                 variants={childrenVar("vertical", "spring")}
+                className=" w-full md:w-[40%] flex-auto border border-purple-500 "
                 key={index}
               >
                 <TestimonialC {...item} />
@@ -114,8 +118,8 @@ function Testimonials() {
 
 function TestimonialC(props: TestimonialT) {
   return (
-    <div className="flex items-start justify-center gap-5 rounded-md border  bg-white p-5">
-      <div className="relative aspect-square h-20 ">
+    <div className="flex w-full flex-col items-start justify-center gap-5 rounded-md border  bg-white p-5">
+      <div className="relative aspect-square h-10 md:h-20 ">
         <Image
           alt=""
           src={props.photo}
@@ -124,7 +128,7 @@ function TestimonialC(props: TestimonialT) {
         ></Image>
       </div>
       <div className="flex flex-col items-center justify-start gap-5">
-        <p className="max-w-[300px] font-semibold">{props.description}</p>
+        <p className="max-w-[300px] w-full font-semibold">{props.description}</p>
         <span className="w-full text-sm uppercase tracking-widest text-neutral-500">
           {props.name}
         </span>
