@@ -6,7 +6,7 @@ import Link from "next/link";
 function Landing() {
   return (
     <section className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
-      {/* <Divider /> */}
+      <Divider />
       <motion.div
         variants={parentVariant(0.5, 0.25)}
         whileInView="visible"
