@@ -12,7 +12,7 @@ function Landing() {
         whileInView="visible"
         viewport={{ once: true }}
         initial="hidden"
-        className="flex w-full flex-1 items-center justify-center border  p-5 md:p-10 lg:p-20"
+        className="flex w-full flex-1 items-center justify-center   p-5 md:p-10 lg:p-20"
       >
         <div className="flex w-full max-w-[1600px] flex-col items-stretch justify-center gap-10 lg:flex-row lg:gap-0">
           <div className="flex w-full flex-col items-start justify-start gap-5  md:gap-10 xl:w-1/2">
@@ -90,7 +90,7 @@ function Landing() {
               className="w-full"
               variants={childrenVar("vertical", "spring")}
             >
-              <div className="relative  aspect-square w-full max-w-[600px] overflow-hidden rounded-full border bg-white shadow-lg shadow-black/20 ">
+              <div className="relative  aspect-square w-full max-w-[600px] overflow-hidden rounded-full  bg-white shadow-lg shadow-black/20 ">
                 <Image
                   alt=""
                   className="absolute left-0 top-0 z-[2]"

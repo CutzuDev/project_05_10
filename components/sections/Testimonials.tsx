@@ -99,11 +99,11 @@ function Testimonials() {
             Success Stories
           </motion.h1>
 
-          <div className="flex w-full max-w-[1000px] flex-wrap gap-5 items-stretch justify-start  border border-red-500">
+          <div className="flex w-full max-w-[1000px] flex-wrap gap-5 items-stretch justify-start">
             {TestimonialA.map((item, index) => (
               <motion.div
                 variants={childrenVar("vertical", "spring")}
-                className=" w-full md:w-[40%] flex-auto border border-purple-500 "
+                className=" w-full md:w-[40%] flex-auto  "
                 key={index}
               >
                 <TestimonialC {...item} />
@@ -118,7 +118,7 @@ function Testimonials() {
 
 function TestimonialC(props: TestimonialT) {
   return (
-    <div className="flex w-full flex-col items-start justify-center gap-5 rounded-md border  bg-white p-5">
+    <div className="flex w-full flex-col items-start justify-center gap-5 rounded-md   bg-white p-5">
       <div className="relative aspect-square h-10 md:h-20 ">
         <Image
           alt=""
